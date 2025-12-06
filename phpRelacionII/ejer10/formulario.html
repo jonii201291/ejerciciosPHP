@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario Calculadora</title>
+</head>
+<body>
+
+<h2>Formulario de entrada</h2>
+
+<form action="calcular.php" method="POST">
+    <label>Número 1:</label>
+    <input type="number" name="n1" required><br><br>
+
+    <label>Número 2:</label>
+    <input type="number" name="n2" required><br><br>
+
+    <label>Operador:</label>
+    <select name="op">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select><br><br>
+
+    <button type="submit">Enviar</button>
+</form>
+
+</body>
+</html>

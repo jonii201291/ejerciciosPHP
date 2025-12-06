@@ -1,0 +1,28 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="container mt-5">
+    <form id="form" action="primo_divisores.php" method="POST" class="card p-4">
+        
+        <label class="form-label">Número (entero positivo)</label>
+        <input type="number" name="num" class="form-control mb-3" required min="1">
+
+        <label class="form-label">Operación</label>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="op" value="primo" required>
+            <label class="form-check-label">¿Es primo?</label>
+        </div>
+        <div class="form-check mb-3">
+            <input class="form-check-input" type="radio" name="op" value="divisores">
+            <label class="form-check-label">Mostrar divisores</label>
+        </div>
+
+        <button class="btn btn-primary w-100">Enviar</button>
+    </form>
+</div>
+
+<script>
+document.getElementById("form").onsubmit = e => {
+    let n = parseInt(document.querySelector("[name=num]").value);
+    if (n < 1) { alert("Debe ser mayor que 0"); e.preventDefault(); }
+};
+</script>

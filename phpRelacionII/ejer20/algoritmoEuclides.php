@@ -1,0 +1,28 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="container mt-5">
+<form id="form" action="convert20.php" method="POST" class="card p-4">
+
+    <label class="form-label">Número decimal</label>
+    <input type="number" class="form-control mb-3" name="num" required>
+
+    <label class="form-label">Convertir a:</label>
+    <select name="base" class="form-select mb-3" required>
+        <option value="0">Selecciona operación</option>
+        <option value="2">Binario</option>
+        <option value="8">Octal</option>
+        <option value="16">Hexadecimal</option>
+    </select>
+
+    <button class="btn btn-primary w-100">Convertir</button>
+</form>
+</div>
+
+<script>
+document.getElementById("form").onsubmit = e => {
+    if (document.querySelector("[name=base]").value === "0") {
+        alert("Debes seleccionar una operación.");
+        e.preventDefault();
+    }
+};
+</script>
